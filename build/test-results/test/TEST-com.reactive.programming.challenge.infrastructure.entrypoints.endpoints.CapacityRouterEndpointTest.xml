@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2025-05-15T02:46:31.798Z" hostname="VICTOR-PEREZC.local" time="0.808">
+  <properties/>
+  <testcase name="shouldCreateCapacitySuccessfully()" classname="com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest" time="0.722"/>
+  <testcase name="shouldReturnListOfCapacities()" classname="com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest" time="0.086">
+    <failure message="java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:232)
+	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.StatusAssertions.isOk(StatusAssertions.java:68)
+	at com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest.shouldReturnListOfCapacities(CapacityRouterEndpointTest.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[21:46:28.001 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest]: CapacityRouterEndpointTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:46:28.088 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.reactive.programming.challenge.CapacityApiApplication for test class com.reactive.programming.challenge.infrastructure.entrypoints.endpoints.CapacityRouterEndpointTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2025-05-14T21:46:28.293-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : Starting CapacityRouterEndpointTest using Java 17.0.15 with PID 68360 (started by victor.perez in /Users/victor.perez/Documents/RepositorioGit/capacity-api)
+2025-05-14T21:46:28.294-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T21:46:28.657-05:00  INFO 68360 --- [capacity-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-05-14T21:46:28.750-05:00  INFO 68360 --- [capacity-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 2 R2DBC repository interfaces.
+2025-05-14T21:46:29.233-05:00  INFO 68360 --- [capacity-api] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-14T21:46:29.378-05:00 ERROR 68360 --- [capacity-api] [       single-1] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-05-14T21:46:29.606-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
+2025-05-14T21:46:29.610-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
+2025-05-14T21:46:29.687-05:00  INFO 68360 --- [capacity-api] [    Test worker] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 61977 (http)
+2025-05-14T21:46:29.706-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : Started CapacityRouterEndpointTest in 1.548 seconds (process running for 2.196)
+2025-05-14T21:46:29.712-05:00  INFO 68360 --- [capacity-api] [    Test worker] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T21:46:29.713-05:00  INFO 68360 --- [capacity-api] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2025-05-14T21:46:31.811-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : Starting CapacityRouterEndpointTest using Java 17.0.15 with PID 68360 (started by victor.perez in /Users/victor.perez/Documents/RepositorioGit/capacity-api)
+2025-05-14T21:46:31.811-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T21:46:31.915-05:00  INFO 68360 --- [capacity-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-05-14T21:46:31.933-05:00  INFO 68360 --- [capacity-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 R2DBC repository interfaces.
+2025-05-14T21:46:31.983-05:00  INFO 68360 --- [capacity-api] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-14T21:46:32.014-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
+2025-05-14T21:46:32.015-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
+2025-05-14T21:46:32.024-05:00  INFO 68360 --- [capacity-api] [    Test worker] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 61985 (http)
+2025-05-14T21:46:32.026-05:00  INFO 68360 --- [capacity-api] [    Test worker] c.r.p.c.i.e.e.CapacityRouterEndpointTest : Started CapacityRouterEndpointTest in 0.226 seconds (process running for 4.515)
+2025-05-14T21:46:32.451-05:00  INFO 68360 --- [capacity-api] [     parallel-4] c.r.p.c.i.e.h.impl.CapacityHandler       : 6cdf46ad-d01f-4d90-b706-3b656068080b
+2025-05-14T21:46:32.466-05:00  INFO 68360 --- [capacity-api] [     parallel-4] c.r.p.c.domain.usecase.CapacityUseCase   : Registering capacity: Spring Security
+2025-05-14T21:46:32.468-05:00  INFO 68360 --- [capacity-api] [     parallel-4] c.r.p.c.i.adapter.CapacityAdapter        : Checking if capacity exists with name Spring Security
+2025-05-14T21:46:32.506-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-1] c.r.p.c.i.e.h.impl.CapacityHandler       : Capacity created successfully with messageId: 6cdf46ad-d01f-4d90-b706-3b656068080b
+2025-05-14T21:46:32.522-05:00  INFO 68360 --- [capacity-api] [     parallel-5] c.r.p.c.i.e.h.impl.CapacityHandler       : name
+2025-05-14T21:46:32.522-05:00  INFO 68360 --- [capacity-api] [     parallel-5] c.r.p.c.i.e.h.impl.CapacityHandler       : asc
+2025-05-14T21:46:32.569-05:00  INFO 68360 --- [capacity-api] [actor-tcp-nio-4] c.r.p.c.i.e.h.impl.CapacityHandler       : Received capacity: java.util.stream.ReferencePipeline$3@488b990d - techs: java.util.stream.ReferencePipeline$3@3e88440
+2025-05-14T21:46:32.590-05:00 ERROR 68360 --- [capacity-api] [flux-http-nio-3] a.w.r.e.AbstractErrorWebExceptionHandler : [9fac811]  500 Server Error for HTTP GET "/capacities/api/capacity?sortBy=name&direction=asc&page=0&size=10"
+
+org.springframework.web.reactive.function.client.WebClientRequestException: Connection refused: localhost/127.0.0.1:8080
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:137) ~[spring-webflux-6.2.6.jar:6.2.6]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to POST http://localhost:8080/technologies/api/technologiesByIdIn [DefaultWebClient]
+	*__checkpoint ⇢ HTTP GET "/capacities/api/capacity?sortBy=name&direction=asc&page=0&size=10" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:137) ~[spring-webflux-6.2.6.jar:6.2.6]
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:205) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:229) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:279) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:327) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:212) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:337) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1742) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:196) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:325) ~[reactor-netty-http-1.2.5.jar:1.2.5]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:174) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:479) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:443) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:593) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.5.jar:3.7.5]
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:595) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.setFailure(TransportConnector.java:541) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at reactor.netty.transport.TransportConnector.lambda$doConnect$7(TransportConnector.java:262) ~[reactor-netty-core-1.2.5.jar:1.2.5]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:326) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:342) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+		at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:8080
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.119.Final.jar:4.1.119.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-05-14T21:46:32.602-05:00 ERROR 68360 --- [capacity-api] [    Test worker] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> GET /capacities/api/capacity?sortBy=name&direction=asc&page=0&size=10
+> WebTestClient-Request-Id: [2]
+> Accept: [application/json]
+
+No content
+
+< 500 INTERNAL_SERVER_ERROR Internal Server Error
+< Content-Type: [application/json]
+< Content-Length: [146]
+
+{"timestamp":"2025-05-15T02:46:32.590+00:00","path":"/capacities/api/capacity","status":500,"error":"Internal Server Error","requestId":"9fac811"}
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

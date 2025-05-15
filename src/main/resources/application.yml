@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: capacity-api
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/webflux
+    username: root
+    password: admin123
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
